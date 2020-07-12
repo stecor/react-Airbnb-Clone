@@ -1,17 +1,17 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import navBar from './navBar.css';
-import { Link } from 'react-router-dom';
 
-function NavBar (){
+function NavBar (props){
   return(
     <nav className="black">
       <div className="nav-wrapper">
-        <Link to="/" className="brand-logo">AirBnB</Link>
+        <NavLink exact to="/" className="brand-logo">AirBnB</NavLink>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li><Link to="/host">Become a host</Link></li>
-          <li><Link to="/help">Help</Link></li>
-          <li><Link to="/signup">Sign up</Link></li>
-          <li><Link to="/login">Log in</Link></li>
+          <li><NavLink to="/host">Become a host</NavLink></li>
+          <li><NavLink to="/help">Help</NavLink></li>
+          <li><NavLink to="/signup">Sign up</NavLink></li>
+          <li><NavLink to="/login">Log in</NavLink></li>
         </ul>
       </div>
     </nav>
